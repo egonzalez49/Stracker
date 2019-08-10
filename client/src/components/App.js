@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Navbar';
+import Footer from './Footer';
 import HomeContainer from './home/HomeContainer';
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" component={HomeContainer} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     );

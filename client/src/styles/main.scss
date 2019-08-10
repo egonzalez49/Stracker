@@ -14,6 +14,14 @@ body {
   background-color: #fbeaff;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -21,4 +29,117 @@ body {
 
 .hide-mobile {
   display: none;
+  width: 0;
+}
+
+//media queries
+
+@media only screen and (max-width: 365px) {
+  h1 {
+    font-size: 1.7em;
+  }
+
+  .sub-heading {
+    font-size: 1.2em;
+  }
+
+  .item-price {
+    padding-bottom: 0.2em;
+  }
+}
+
+@media only screen and (min-width: 440px) {
+  .store-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .sub-heading {
+    font-size: 1.6em;
+  }
+
+  .item-image-container {
+    flex: 0 40%;
+  }
+
+  .item-price {
+    padding-bottom: 0.4em;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .sub-heading {
+    font-size: 1.6em;
+  }
+
+  .item-image-container {
+    flex: 0 30%;
+  }
+
+  .footer-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-text {
+    text-align: end;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+
+  .sub-heading {
+    font-size: 1.9em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+
+  .hide-mobile {
+    width: inherit !important;
+  }
+
+  nav ul {
+    background: none;
+    position: inherit;
+    width: auto;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    transition: none;
+  }
+
+  nav ul li {
+    padding-top: 1em;
+    float: left;
+  }
+
+  nav ul li a {
+    color: white;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    margin-left: 2.5em;
+    display: inline;
+  }
 }

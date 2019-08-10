@@ -16,12 +16,16 @@ class StoreList extends React.Component {
     if (this.props.store) {
       return (
         <div>
-          <h4 className="sub-heading">Featured</h4>
+          <div className="sub-heading-line">
+            <h4 className="sub-heading">Featured</h4>
+          </div>
           <div className="store-list">
             {this.renderList('BRWeeklyStorefront')}
           </div>
 
-          <h4 className="sub-heading">Daily</h4>
+          <div className="sub-heading-line">
+            <h4 className="sub-heading">Daily</h4>
+          </div>
           <div className="store-list">
             {this.renderList('BRDailyStorefront')}
           </div>

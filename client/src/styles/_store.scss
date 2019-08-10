@@ -8,10 +8,32 @@
   text-align: center;
 }
 
-.sub-heading {
-  margin-top: 0.7em;
+.sub-heading-line {
+  position: relative;
   text-align: center;
+}
+
+.sub-heading-line:after {
+  content: '';
+  margin-top: 0.5em;
+  width: 100%;
+  border-bottom: solid 2px $primaryColor;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.sub-heading {
+  margin-top: 0.9em;
   font-size: 1.4em;
+  background-color: #fbeaff; /* Same as the parents Background */
+  color: $black;
+  width: auto;
+  display: inline-block;
+  padding: 0 0.6em;
+  z-index: 2;
+  position: relative;
 }
 
 //list of store items
@@ -25,22 +47,33 @@
   position: relative;
   width: 60%;
   margin-top: 1.2em;
+  overflow: hidden;
 }
 
 //store item image
 .item-image {
+  z-index: 1;
+  width: 100%;
   max-width: 100%;
   display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 //image overlay for items
 .image-overlay {
+  z-index: 2;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  cursor: pointer;
+}
+
+.image-overlay:hover ~ .item-image {
+  transform: scale(1.1);
 }
 
 //background behind item name and price
