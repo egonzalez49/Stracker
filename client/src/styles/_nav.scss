@@ -1,0 +1,23 @@
+@import 'variables';
+
+//overall navbar container (purple bg)
+.nav-container {
+  background-color: $primaryColor;
+  color: white;
+  padding: 0.8em 0em;
+}
+
+//navbar flexbox to seperate logo from links
+.nav-flex {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//toggle-menu
+.menu {
+  width: 32px;
+  margin-top: 25%;
+}

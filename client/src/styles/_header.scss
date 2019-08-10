@@ -1,0 +1,64 @@
+@import 'variables';
+
+//hero image
+.home-header {
+  padding: 7.5em 0;
+  height: 50vh;
+  background-image: url('../images/hero-image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//hero text above search
+.heading {
+  margin-bottom: 0.8em;
+  font-family: $sans-serif;
+  color: white;
+  text-align: center;
+}
+
+//container with icon and search input
+.search-container {
+  position: relative;
+}
+
+//username input
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 1.5em 1.5em;
+  padding-right: 3.2em;
+  color: $black;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: none;
+  font-family: $serif;
+  font-size: 1em;
+}
+
+//search icon
+.search-icon {
+  position: absolute;
+  right: 6%;
+  top: 32%;
+  width: 10%;
+  max-width: 24px;
+}
+
+//all for placeholder changes to support Firefox/Chrome
+::-webkit-input-placeholder {
+  color: $black;
+  opacity: 1 !important; /* for older chrome versions. may no longer apply. */
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $black;
+  opacity: 1 !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $black;
+  opacity: 1 !important;
+}

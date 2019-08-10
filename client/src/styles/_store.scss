@@ -1,0 +1,105 @@
+@import 'variables';
+
+//main heading in color purple
+.heading-alt {
+  margin-top: 1.5em;
+  font-family: $sans-serif;
+  color: $primaryColor;
+  text-align: center;
+}
+
+.sub-heading {
+  margin-top: 0.7em;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+//list of store items
+.store-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image-container {
+  position: relative;
+  width: 60%;
+  margin-top: 1.2em;
+}
+
+//store item image
+.item-image {
+  max-width: 100%;
+  display: block;
+}
+
+//image overlay for items
+.image-overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+//background behind item name and price
+.item-background {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.item-name {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.item-price {
+  padding-bottom: 0.6em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+
+  img {
+    width: 32px;
+    margin-right: 0.2em;
+    vertical-align: -30%;
+  }
+}
+
+//item rarity backgrounds
+.Legendary {
+  background: radial-gradient(#ea8d23, #78371d);
+  border: 5px solid #e98d4b;
+  overflow: hidden;
+}
+
+.Epic {
+  background: radial-gradient(#c359ff, #4b2483);
+  border: 5px solid #e95eff;
+  overflow: hidden;
+}
+
+.Rare,
+.Sturdy {
+  background: radial-gradient(#2cc1ff, #143977);
+  border: 5px solid #37d1ff;
+  overflow: hidden;
+}
+
+.Handmade {
+  background: radial-gradient(#69bb1e, #175117);
+  border: 5px solid #87e339;
+  overflow: hidden;
+}
+
+.Quality {
+  background: radial-gradient(#c359ff, #4b2483);
+  border: 5px solid #e95eff;
+  overflow: hidden;
+}
