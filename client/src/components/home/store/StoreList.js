@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import StoreItem from './StoreItem';
 
 class StoreList extends React.Component {

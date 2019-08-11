@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import hamburgerIcon from '../images/toggle-menu.png';
 import exitIcon from '../images/exit-menu.png';
@@ -31,9 +32,11 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div className="nav-container">
+      <div id="home" className="nav-container">
         <div className="nav-flex">
-          <h1 className="logo">Stracker</h1>
+          <Link to="/">
+            <h1 className="logo">Stracker</h1>
+          </Link>
 
           <nav>
             <img
@@ -53,10 +56,14 @@ class Navbar extends React.Component {
                 <img src={exitIcon} alt="exit menu" />
               </li>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink smooth to="/#home">
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/">Store</Link>
+                <NavLink smooth to="/#store">
+                  Store
+                </NavLink>
               </li>
             </ul>
           </nav>

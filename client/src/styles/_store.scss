@@ -2,6 +2,7 @@
 
 //main heading in color purple
 .heading-alt {
+  padding-top: 1em;
   margin-top: 1.5em;
   font-family: $sans-serif;
   color: $primaryColor;
@@ -106,7 +107,8 @@
 }
 
 //item rarity backgrounds
-.Legendary {
+.Legendary,
+.Fine {
   background: radial-gradient(#ea8d23, #78371d);
   border: 5px solid #e98d4b;
   overflow: hidden;

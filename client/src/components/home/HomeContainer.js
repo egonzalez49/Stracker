@@ -6,7 +6,7 @@ import StoreContainer from './store/StoreContainer';
 class HomeContainer extends React.Component {
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Header />
         <StoreContainer />
       </div>

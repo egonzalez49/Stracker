@@ -11,7 +11,7 @@ class StoreContainer extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div id="store" className="container">
         <h1 className="heading-alt">Current Store</h1>
         <StoreList />
       </div>
