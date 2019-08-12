@@ -1,8 +1,12 @@
 {
   "name": "stracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "fortnite stats tracker and store lookup",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
@@ -10,7 +14,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
-  "author": "",
+  "author": "Elmer Gonzalez",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",

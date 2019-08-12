@@ -1,20 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import StoreItem from './StoreItem';
+import MatchItem from './MatchItem';
 
 class MatchList extends React.Component {
   renderList = () => {
-    return this.props.store.map(item => {
-      if (item.storeCategory === category) {
-        return <StoreItem key={item.manifestId} item={item} />;
-      }
-      return null;
+    return this.props.matches.recentMatches.map(match => {
+      return <MatchItem key={match.id} match={match} />;
     });
   };
 
   render() {
-    if (this.props.store) {
+    if (this.props.matches && this.props.matches.recentMatches) {
+      if (!this.props.matches.recentMatches.length) {
+        return (
+          <h4
+            style={{ display: 'block', textAlign: 'center' }}
+            className="sub-heading"
+          >
+            No recent matches. {':('}
+          </h4>
+        );
+      }
+
       return (
         <div>
           <div className="match-list">{this.renderList()}</div>
@@ -28,7 +36,7 @@ class MatchList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    store: state.store
+    matches: state.matches
   };
 };
 

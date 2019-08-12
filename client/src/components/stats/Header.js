@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Header extends React.Component {
   render() {
-    if (this.props.stats) {
+    if (this.props.stats && !this.props.stats.error) {
       const { epicUserHandle } = this.props.stats;
       const wins = this.props.stats.lifeTimeStats[8].value;
       const winrate = this.props.stats.lifeTimeStats[9].value;

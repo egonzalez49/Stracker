@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchStats } from '../../actions';
+import { fetchStats, clearStats } from '../../actions';
 import Header from './Header';
 import MatchContainer from './matches/MatchContainer';
 
@@ -9,6 +9,10 @@ class StatsContainer extends React.Component {
   componentDidMount() {
     const decoded = decodeURI(this.props.match.params.username);
     this.props.fetchStats(decoded);
+  }
+
+  componentWillUnmount() {
+    this.props.clearStats();
   }
 
   render() {
@@ -23,5 +27,5 @@ class StatsContainer extends React.Component {
 
 export default connect(
   null,
-  { fetchStats }
+  { fetchStats, clearStats }
 )(StatsContainer);

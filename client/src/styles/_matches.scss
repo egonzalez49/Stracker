@@ -3,3 +3,35 @@
 .stats-heading {
   margin-top: 0.4em;
 }
+
+.match-list {
+  .match-item-container {
+    border-bottom: 2px #c7c7c7 solid;
+    padding-bottom: 1em;
+  }
+}
+
+.match-item-container:last-child {
+  border-bottom: none;
+}
+
+.match-item-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.match-time {
+  color: #5f6a72;
+}
+
+//victory heading colors
+.Victory {
+  color: #00a97f;
+}
+
+.Defeat {
+  color: #c34a36;
+}

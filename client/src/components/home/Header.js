@@ -2,13 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { fetchStats } from '../../actions';
+import { fetchStats, clearStats } from '../../actions';
 import searchIcon from '../../images/search-icon.svg';
 
 class Header extends React.Component {
   state = {
     username: ''
   };
+
+  componentDidMount() {
+    this.props.clearStats();
+  }
 
   onInputChange = e => {
     this.setState({ username: e.target.value });
@@ -17,6 +21,12 @@ class Header extends React.Component {
   onInputSubmit = e => {
     this.props.fetchStats(this.state.username, this.props.history);
     e.preventDefault();
+  };
+
+  renderError = () => {
+    if (this.props.stats && this.props.stats.error) {
+      return true;
+    }
   };
 
   render() {
@@ -40,13 +50,24 @@ class Header extends React.Component {
               />
             </div>
           </form>
+          {this.renderError() ? (
+            <div className="error-container">
+              <p className="error-text">{this.props.stats.error}</p>
+            </div>
+          ) : null}
         </div>
       </header>
     );
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    stats: state.stats
+  };
+};
+
 export default connect(
-  null,
-  { fetchStats }
+  mapStateToProps,
+  { fetchStats, clearStats }
 )(withRouter(Header));

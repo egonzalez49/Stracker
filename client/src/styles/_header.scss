@@ -94,3 +94,16 @@
     font-size: 1.25em;
   }
 }
+
+.error-container {
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+.error-text {
+  color: white;
+  background: rgba(195, 74, 54, 0.7);
+  padding: 0 1em;
+  display: inline;
+  font-size: 1.4em;
+}
